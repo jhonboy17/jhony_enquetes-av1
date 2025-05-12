@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Enquetes Escolares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciamento de Enquetes Escolares</h1>
+    
+    <form id="enqueteForm">
+      <div class="form-group">
+        <label for="titulo">Título da Enquete:</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Digite o título da enquete" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="data">Data de Votação:</label>
+        <input type="date" id="data" name="data" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="status">Status da Enquete:</label>
+        <select id="status" name="status" required>
+          <option value="ativa">Ativa</option>
+          <option value="finalizada">Finalizada</option>
+          <option value="pendente">Pendente</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn">Cadastrar Enquete</button>
+    </form>
+
+    <div>
+      <h2>Enquetes Cadastradas</h2>
+      <ul id="listaEnquetes">
+        <!-- Enquetes serão exibidas aqui -->
+      </ul>
+    </div>
+
+    <button id="listarBtn" class="btn">Listar Enquetes</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
