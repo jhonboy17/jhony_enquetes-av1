@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerenciamento de Enquetes Escolares</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciamento de Enquetes Escolares</h1>
+
+    <!-- Formulário de Cadastro de Enquete -->
+    <form id="enqueteForm">
+      <div class="form-group">
+        <label for="titulo">Título da Enquete:</label>
+        <input type="text" id="titulo" required />
+      </div>
+
+      <div class="form-group">
+        <label for="data">Data de Votação:</label>
+        <input type="date" id="data" required />
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status da Enquete:</label>
+        <select id="status" required>
+          <option value="ativa">Ativa</option>
+          <option value="finalizada">Finalizada</option>
+          <option value="pendente">Pendente</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="opcoes">Opções de Voto (separe por vírgulas):</label>
+        <input type="text" id="opcoes" placeholder="Ex: Sim,Não,Depende" required />
+      </div>
+
+      <button type="submit" class="btn">Cadastrar Enquete</button>
+    </form>
+
+    <h2>Enquetes Cadastradas</h2>
+    <ul id="listaEnquetes"></ul>
+
+    <div class="button-group">
+      <button id="listarBtn" class="btn">Listar Enquetes</button>
+      <button id="clearListBtn" class="btn clear">Limpar Lista</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Gerenciamento de Enquetes Escolares - 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
