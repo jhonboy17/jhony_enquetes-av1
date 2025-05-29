@@ -3,55 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gerenciamento de Enquetes Escolares</title>
+  <title>Enquetes Escolares</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Gerenciamento de Enquetes Escolares</h1>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Enquetes</h2>
+      <nav>
+        <ul>
+          <li><button id="homeBtn">Início</button></li>
+          <li><button id="novaEnqueteBtn">Nova Enquete</button></li>
+          <li><button id="respostasBtn">Ver Respostas</button></li>
+        </ul>
+      </nav>
+    </aside>
 
-    <!-- Formulário de Cadastro de Enquete -->
-    <form id="enqueteForm">
-      <div class="form-group">
-        <label for="titulo">Título da Enquete:</label>
-        <input type="text" id="titulo" required />
-      </div>
 
-      <div class="form-group">
-        <label for="data">Data de Votação:</label>
-        <input type="date" id="data" required />
-      </div>
+    <main class="main-content">
+      <h1>Gerenciamento de Enquetes Escolares</h1>
 
-      <div class="form-group">
-        <label for="status">Status da Enquete:</label>
+
+      <form id="enqueteForm">
+        <label>Título:</label>
+        <input type="text" id="titulo" required>
+
+
+        <label>Data de Votação:</label>
+        <input type="date" id="data" required>
+
+
+        <label>Status:</label>
         <select id="status" required>
           <option value="ativa">Ativa</option>
-          <option value="finalizada">Finalizada</option>
           <option value="pendente">Pendente</option>
+          <option value="finalizada">Finalizada</option>
         </select>
-      </div>
 
-      <div class="form-group">
-        <label for="opcoes">Opções de Voto (separe por vírgulas):</label>
-        <input type="text" id="opcoes" placeholder="Ex: Sim,Não,Depende" required />
-      </div>
 
-      <button type="submit" class="btn">Cadastrar Enquete</button>
-    </form>
+        <label>Opções (separadas por vírgula):</label>
+        <input type="text" id="opcoes" placeholder="Ex: Sim,Não,Depende" required>
 
-    <h2>Enquetes Cadastradas</h2>
-    <ul id="listaEnquetes"></ul>
 
-    <div class="button-group">
-      <button id="listarBtn" class="btn">Listar Enquetes</button>
-      <button id="clearListBtn" class="btn clear">Limpar Lista</button>
-    </div>
+        <button type="submit">Salvar Enquete</button>
+      </form>
+
+      <section class="lista-enquetes">
+        <h2>Enquetes Cadastradas</h2>
+        <ul id="listaEnquetes"></ul>
+        <button id="clearListBtn" class="danger">Limpar Todas</button>
+      </section>
+    </main>
   </div>
 
-  <footer>
-    <p>Gerenciamento de Enquetes Escolares - 2025</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
